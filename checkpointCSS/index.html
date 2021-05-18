@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <title>My first Page</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav>
+        <p>Portfolio</p>
+        <a href="Home"> Home </a>
+        <a href="About"> About </a>
+        <a href="Work"> Work </a>
+        <a href="Resume"> Resume </a>
+        <a href="Contact">Contact</a>
+    </nav>
+    <section class="Home">
+        <h1> Home <h1>
+                <h2 class="test">Hey i'm Nihel Mrad</h2>
+                <h4>A Software developer</h4>
+                <img src="images/profilimg.png" />
+    </section>
+    <section class="About">
+        <h1 id="test1">About</h1>
+        <table style="text-align: center;">
+            <tr>
+                <td>
+                    <audio controls>
+                        <source src="audio/la-plus-belle-musique-douce-du-monde.mp3" type="audio/mp3">
+                    </audio>
+                </td>
+                <td>
+                    <video controls width="420" height="340">
+                        <source src="video/le-html-cest-quoi.mp4" type="video/mp4" />
+                    </video>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section class="Work">
+           <h1> Work </h1>
+    </section>
+    <section class="Resume">
+        <h1>Resume</h1>
+    </section>
+    <section class="Contact">
+        <h1>Contact</h1>
+        
+        <form id="formulaire">
+            <table>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td><input name="nom" type="text" placeholder="enter your name" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>age</p>
+                    </td>
+                    <td><input name="age" type="number" placeholder="enter your phone"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>country</p>
+                    </td>
+                    <td><select>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="England">England</option>
+                            <option value="egypte">Egypte</option>
+                            <option value="algeria">Algeria</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Message</p>
+                    </td>
+                    <td><textarea name="message" maxlength="100"></textarea></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"><button type="submit" name="envoyer">Envoyer</button></td>
+                </tr>
+
+            </table>
+
+        </form>
+    
+    </section>
+    <footer style="  background-color: rgb(228, 187, 133); width: 100%; text-align: center; display: inline-block;">
+        <p>My first web page created with html.</p>
+        <a href="#Home">Top</a>
+        <a href="https://www.gomycode.com/TN-FR/home">Go My Code</a>
+    </footer>
+</body>
+
+</html>

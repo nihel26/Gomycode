@@ -1,0 +1,14 @@
+#navbar {
+  display: flex;
+  justify-content: space-around;
+}
+#navbar li {
+  list-style-type: none;
+}
+#drowpmenu {
+  display: none;
+  text-align: left;
+}
+#menu:hover #drowpmenu {
+  display: block;
+}

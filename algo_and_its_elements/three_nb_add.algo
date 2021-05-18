@@ -1,0 +1,12 @@
+ALGORITHM three_numbers
+VAR
+    a,b,c : INTEGER;
+    result : INTEGER :=0;
+BEGIN
+    Read(a)
+    Read(b)
+    Read(c)
+    result := a + b + c;
+    Write (result)
+
+END

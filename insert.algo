@@ -1,0 +1,9 @@
+PROCEDURE INSert_sort (a : ARRAY_OF integer[10];, i,pos,element : INTEGER)
+BEGIN
+    i = pos-1;
+    WHILE (i>=0 and a[i]>element) DO
+        a[i+1]=a[i]
+        i=i-1
+    END_WHILE
+    a[i+1] = element
+END

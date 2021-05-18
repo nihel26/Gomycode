@@ -1,0 +1,94 @@
+//read from table
+ALGORITHM traverse_array
+VAR
+    tab : ARRAY_OF INTEGER[5];
+    i:INTEGER;
+BEGIN
+    tab := {1,2,3,5,7,8};
+    write ('Print Array :')
+    FOR i FROM 0 TO 4 STEP 1  DO
+        write(tab[i])
+    END_FOR
+
+    FOR i FROM 0 TO tab.length-1 STEP 1 step  DO
+        write(tab[i])
+    END_FOR
+END
+
+//insert in table
+ALGORITHM insertion_array
+VAR
+   tab : ARRAY_OF INTEGER[5];
+   i,j, pos, elt : INTEGER;
+BEGIN
+   FOR i FROM 0 TO 3 DO
+       Read(tab[i]);// insert from user
+   END_FOR
+
+   Write("give the element to insert");
+   Read(elt);
+   Write("give the position to insert in array");
+   Read(pos);
+   j := tab.length;
+   WHILE (j >= pos) DO
+       tab[j+1] := tab[j]; // translation from left to right
+       j := j-1; // update index
+   END_WHILE
+
+   tab[pos] := elt;
+   // remember the tab.length is increased by 1.
+END
+
+
+//search in table
+ALGORITHM search_array
+VAR
+    tab: ARRAY_OF INTEGER[5];
+    i,j,pos,elt : INTEGER;
+BEGIN
+    FOR i FROM 0 TO 4 DO
+        Read(tab[i]);
+    END_FOR
+
+    write("give the element to search of");
+    Read(elt);
+
+    j:=0;
+    WHILE (j<tab.length)DO
+    IF (tab[j]=elt) THEN
+    BREAK;
+    END_IF
+    j:=j+1;
+    END_WHILE
+    IF (j = tab.length) THEN  // we reached the end of array without finding the element
+       pos := -1; // -1 means we don't find the element.
+   ELSE
+       pos := j;
+   END_IF
+
+   Write("The position of the element is ", pos);
+END
+
+
+//delete from table
+ALGORITHM deletion_array
+VAR
+   tab : ARRAY_OF INTEGER[5];
+   i,j, pos : INTEGER;
+BEGIN
+   FOR i FROM 0 TO 4 DO
+       Read(tab[i]);// insert from user
+   END_FOR
+
+   Write("give the position to delete");
+   Read(pos);
+
+   j := pos;
+   WHILE (j < tab.length) DO
+       tab[j] := tab[j+1]; // translation from right to left
+       j := j+1; // update index
+   END_WHILE
+
+   // remember the tab.length is decreased by 1.
+
+END
